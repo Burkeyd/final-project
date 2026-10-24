@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
-    />
+    /> -->
     <script src="script.js" defer></script>
   </head>
 
@@ -19,60 +24,49 @@
     <section id="landing">
       <nav>
         <div class="row nav__row">
-          <div class="nav__logo">
-            <img
-              class="logo"
-              src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
-              alt="Logo"
-            />
+          <div class="nav__brand">
+            <div class="nav__logo">
+              <img
+                class="logo"
+                src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
+                alt="Logo"
+              />
+            </div>
+            <h2 class="nav__text">Treact</h2>
           </div>
-          <h2 class="nav__text">Treact</h2>
-
-          <a href="#" class="nav__link">About</a>
-          <a href="#" class="nav__link">Blog</a>
-          <a href="#" class="nav__link">Pricing</a>
-          <a href="#" class="nav__link">Contact Us</a>
-          <a href="#" class="nav__link">Login</a>
-
-          <button class="btn btn__menu" onclick="openMenu()">
-            Sign Up
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="btn__menu--svg"
-            >
-              <!-- <line x1="3" y1="12" x2="21" y2="12"></line>
+          <button
+            class="nav__burger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            onclick="toggleMenu()"
+          >
+            <svg class="icon--open" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line> -->
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="icon--close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
+          <div class="nav__menu">
+            <a href="#" class="nav__link">About</a>
+            <a href="#" class="nav__link">Blog</a>
+            <a href="#" class="nav__link">Pricing</a>
+            <a href="#" class="nav__link">Contact Us</a>
+            <a href="#" class="nav__link">Login</a>
+
+            <button class="btn btn__menu">
+              Sign Up
+            </button>
+          </div>
         </div>
       </nav>
-      <!-- <div class="modal">
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal__links">
-                <a class="modal__link">About</a>
-                <a class="modal__link">Blog</a>
-                <a class="modal__link">Pricing</a>
-                <a class="modal__link">Contact Us</a>
-                <a class="modal__link">Login</a>
-                <a class="modal__link modal__link--primary">Sign Up</a>
-            </div>
-        </div> -->
       <header>
         <div class="container">
           <div class="row row__narrow">
@@ -85,13 +79,13 @@
                 modular components with a variety of pages and components.
               </p>
               <div class="hdr__email-form">
-                <input type="text" placeholder="Your E-mail Address" />
+                <input type="email" placeholder="Your E-mail Address" aria-label="E-mail address" />
                 <button class="btn hdr__button">Get Started</button>
               </div>
               <div class="hdr__footer">
-                <p>Our TRUSTED Customers</p>
+                <p>OUR TRUSTED CUSTOMERS</p>
                 <img
-                  src="./assets/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
+                  src="./assets/customize-icon.367468c90fd796009b97fbfba67b2c6a.png"
                   alt="Our Customers"
                 />
               </div>
@@ -133,7 +127,7 @@
             </div>
             <div class="fea__box-header">
               <img
-                src="./assets/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
+                src="./assets/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
                 alt="support"
               />
               <p>24/7 Support</p>
@@ -166,7 +160,7 @@
             </div>
             <div class="fea__box-header">
               <img
-                src="./assets/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
+                src="./assets/hero-screenshot-1.40a097b525c2f8c9808e.svg"
                 alt="Fast"
               />
               <p>Fast</p>
@@ -221,9 +215,9 @@
       <section id="steps">
         <div class="container">
           <div class="row stp__row">
-            <div class="stp_left">
+            <div class="stp__left">
               <img
-                src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
+                src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.png" alt="Steps Left"
               />
             </div>
             <div class="stp__right">
@@ -276,12 +270,9 @@
               </p>
               <ul class="val__list">
                 <li class="val__li">
-                  <div class="val__row">
-                    <h2 class="val__logo">
-                      <img
-                        src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                        alt="Val Logo1"
-                      />
+                  <div class="val__item">
+                    <h2 class="val__logo1">
+                      <i class="fa-solid fa-dollar-sign"></i>
                     </h2>
                     <h4 class="val__name">Affordable</h4>
                   </div>
@@ -291,12 +282,9 @@
                   </p>
                 </li>
                 <li class="val__li">
-                  <div class="val__row">
-                    <h2 class="val__logo">
-                      <img
-                        src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                        alt="Val Logo2"
-                      />
+                  <div class="val__item">
+                    <h2 class="val__logo2">                       
+                      <i class="fa-solid fa-suitcase"></i>
                     </h2>
                     <h4 class="val__name">Professionalism</h4>
                   </div>
@@ -323,7 +311,7 @@
         <div class="container pri__container">
           <div class="row pri__row">
             <div class="pri__header">
-              <h4>PRICING</h4>
+              <h4><span class="purple">PRICING</span></h4>
               <h1 class="pri__header2">
                 Reasonable & Flexible <span class="purple"> Plans.</span>
               </h1>
@@ -386,12 +374,12 @@
       </section>
       <section id="testimonials">
         <div class="container">
-          <div class="row">
-            <div class="tst_left">
-              <img src="./assets/photo-1494790108377-be9c29b29330.avif" />
+          <div class="row tst__row">
+            <div class="tst__left">
+              <img src="./assets/photo-1494790108377-be9c29b29330.svg" alt="Left Logo" />
             </div>
-            <div class="tst_right tst__header1">
-              <h4>TESTIMONIALS</h4>
+            <div class="tst__right tst__header1">
+              <h4><span class="purple">TESTIMONIALS</span></h4>              
               <h1 class="tst__header2">
                 Our Clients<span class="purple"> Love Us.</span>
               </h1>
@@ -400,53 +388,69 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua enim
                 ad minim veniam.
               </p>
-              <div>
-                <h2 class="tst__logo tst__her">
-                  <img
-                    src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                    alt="Val Logo2"
-                  />
-                </h2>
-                <h2 class="tst__user-exp">Amazing User Experience</h2>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
-                <img
-                  src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
-                  alt="Her Pic"
-                />
-                <h2>Charlotte Hale</h2>
-                <h3>Director, Delos Inc.</h3>
-              </div>
-              <div>
-                <h2 class="tst__logo tst__him">
-                  <img
-                    src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                    alt="Val Logo2"
-                  />
-                </h2>
-                <h2 class="tst__user-exp">
-                  Love the Developer Experience and Design Principles !
-                </h2>
-                <p>
-                  Sinor Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam.
-                </p>
-                <img
-                  src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
-                  alt="Her Pic"
-                />
-                <h2>Adam Cuppy</h2>
-                <h3>Founder, EventsNYC</h3>
+              <div class="tst__slider">
+                <div class="tst__first-tst tst__slide is-active">
+                  <h2 class="tst__stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h2>
+                  <h2 class="tst__user-exp">Amazing User Experience</h2>
+                  <p class="tst__exp-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                  </p>
+                  <div class="tst__testimonial">
+                    <img
+                      src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.png"
+                      alt="Her Pic"
+                    />
+                    <h2>Charlotte Hale</h2>
+                    <p>Director, Delos Inc.</p>
+                  </div>
+                </div>
+                <div class="tst__second-tst tst__slide">                
+                  <h2 class="tst__stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h2>                
+                  <h2 class="tst__user-exp">
+                    Love the Developer Experience and Design Principles !
+                  </h2>
+                  <p class="tst__exp-text">
+                    Sinor Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam.
+                  </p>
+                  <div class="tst__testimonial">
+                    <img
+                      src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
+                      alt="His Pic"
+                    />
+                    <h2>Adam Cuppy</h2>
+                    <p>Founder, EventsNYC</p>
+                  </div>  
+                </div>
+                <div class="tst__arrows">
+                  <button class="tst__arrow" onclick="prevTestimonial()" aria-label="Previous testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="tst__arrow" onclick="nextTestimonial()" aria-label="Next testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -456,7 +460,7 @@
         <div class="container">
           <div class="row faq__row">
             <div class="faq__header">
-              <h4>FAQS</h4>
+              <h4><span class="purple">FAQS</span></h4>
               <h1 class="faq__header1">
                 You have <span class="purple">Questions ?</span>
               </h1>
@@ -615,19 +619,23 @@
           </div>
         </div>
         <div class="ftr__container">
-          <div class="ftr__logo">
-            <img class="logo"
-              src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-              alt="Logo"
-            />
+          <div class="ftr__brand">
+            <div class="ftr__logo">
+              <img class="logo"
+                src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg"
+                alt="Logo"
+              />
+            </div>
+            <h3 class="ftr__text">Treact Inc.</h3>
           </div>
-          <h3 class="ftr__text">Treact Inc.</h3>
-          <p class="ftr__copyright">© 2023 Treact Inc. All Rights Reserved.</p>
-          <a href="https://facebook.com">Facebook</a>
-          <a href="https://twitter.com">Twitter</a>
-          <a href="https://youtube.com">YouTube</a>
+            <p class="ftr__copyright">© 2018 Treact Inc. All Rights Reserved.</p>
+            <h2 class="ftr__symbles">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </h2>          
         </div>
       </div>
     </footer>
   </body>
-</html>
+</html
